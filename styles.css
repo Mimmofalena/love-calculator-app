@@ -1,0 +1,69 @@
+body {
+  background-color: #6580d9;
+  margin: 0;
+  padding: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+header {
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  font-family: "Courier New", Courier, monospace;
+}
+
+h2 {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  font-family: inherit;
+}
+
+.container {
+  background-color: #bd64d8;
+  width: 95%;
+  height: 12rem;
+  display: flex;
+
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 0.5rem;
+  font: inherit;
+}
+.lover-form {
+  display: flex;
+  padding: 0.5rem;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+  font: inherit;
+  margin-bottom: 0.5rem;
+}
+
+.result {
+  background-color: #d8bd64;
+  text-align: center;
+  font-weight: bold;
+  font: inherit;
+  font-size: xx-large;
+  animation: ease-in;
+  margin: 1rem;
+  padding: 0.5rem;
+}
+.result-hidden {
+  display: none;
+}
+.container button {
+  border-radius: 5px;
+  border: 1px solid black;
+  /* box-shadow: 1px, 8px, 16px rgb(0, 0, 0, 0.5); */
+}
+.container button:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
