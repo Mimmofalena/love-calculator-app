@@ -31,6 +31,9 @@ h2 {
   flex-direction: column;
   margin: 0.5rem;
   font: inherit;
+  border: 1px, solid black;
+  border-radius: 16px;
+  box-shadow: 1px 2px#535050;
 }
 .lover-form {
   display: flex;
@@ -53,17 +56,24 @@ h2 {
   animation: ease-in;
   margin: 1rem;
   padding: 0.5rem;
+  border-radius: 16px;
+  box-shadow: 1px 2px#535050;
 }
 .result-hidden {
   display: none;
 }
 .container button {
-  border-radius: 5px;
+  border-radius: 16px;
   border: 1px solid black;
-  /* box-shadow: 1px, 8px, 16px rgb(0, 0, 0, 0.5); */
+  box-shadow: 1px 2px #362e2e;
 }
 .container button:hover {
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
+}
+.container input {
+  border: 1px, solid black;
+  border-radius: 1px;
+  box-shadow: 1px 2px #362e2e;
 }
