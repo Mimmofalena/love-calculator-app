@@ -1,14 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: #6580d9;
   margin: 0;
   padding: 0;
+  top: 0;
+  left: 0;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 header {
   text-align: center;
   font-size: large;
   font-weight: bold;
-  margin-top: 0.5rem;
+  margin: 1rem;
   padding: 0.5rem;
   font-family: "Courier New", Courier, monospace;
 }
@@ -16,7 +26,7 @@ header {
 h2 {
   text-align: center;
   font-weight: bold;
-  margin-top: 0.5rem;
+  margin: 1rem;
   padding: 0.5rem;
   font-family: inherit;
 }
@@ -24,16 +34,16 @@ h2 {
 .container {
   background-color: #bd64d8;
   width: 95%;
-  height: 12rem;
+  height: 15rem;
   display: flex;
-
   justify-content: space-between;
   flex-direction: column;
   margin: 0.5rem;
   font: inherit;
   border: 1px, solid black;
   border-radius: 16px;
-  box-shadow: 1px 2px#535050;
+  box-shadow: 1px 2px black;
+  margin-left: 1rem;
 }
 .lover-form {
   display: flex;
@@ -57,7 +67,8 @@ h2 {
   margin: 1rem;
   padding: 0.5rem;
   border-radius: 16px;
-  box-shadow: 1px 2px#535050;
+  box-shadow: 1px 2px black;
+  transform: scale(1.1);
 }
 .result-hidden {
   display: none;
@@ -65,7 +76,9 @@ h2 {
 .container button {
   border-radius: 16px;
   border: 1px solid black;
-  box-shadow: 1px 2px #362e2e;
+  box-shadow: 1px 2px black;
+  padding: 0.5rem;
+  margin: 0.5rem;
 }
 .container button:hover {
   -webkit-transform: scale(1.1);
@@ -73,7 +86,23 @@ h2 {
   transform: scale(1.1);
 }
 .container input {
-  border: 1px, solid black;
-  border-radius: 1px;
-  box-shadow: 1px 2px #362e2e;
+  border-radius: 16px;
+  text-align: center;
+}
+.container label {
+  font-weight: 600;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.container input:focus {
+  border-radius: 16px;
+  border: 1px solid black;
 }

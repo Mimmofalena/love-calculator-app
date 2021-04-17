@@ -5,6 +5,8 @@ const result = document.querySelector(".result");
 const inputFields = document.querySelectorAll("input");
 const resetButton = document.querySelector(".reset");
 
+document.getElementById("first-name").focus();
+
 const greatMatch = "This is love!! 😍";
 const goodMatch = "You are compatible, let's celebrate 🥂🎊";
 const averageMatch = "Your match is okay, but it could be definitely better ";
@@ -52,5 +54,5 @@ button.addEventListener("click", function (e) {
 
 resetButton.addEventListener("click", function () {
   result.classList.add("result-hidden");
-  inputFields.forEach((node) => (node.value = ""));
+  inputFields.forEach((input) => (input.value = ""));
 });
