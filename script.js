@@ -21,8 +21,8 @@ const loverFunction = function () {
 
 // let loverMatchRate = loverFunction();
 
-const loveScore = loverFunction();
 const getMatchScore = function () {
+  const loveScore = loverFunction();
   if (loveScore > 90) {
     return loveScore, greatMatch;
   }
