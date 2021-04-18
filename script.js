@@ -18,41 +18,36 @@ const loverFunction = function () {
   return Math.floor(randomNumber) + 1;
 };
 
-let loverMatchRate = loverFunction();
+// let loverMatchRate = loverFunction();
 
-const getMatchScore = function (loveScore) {
+const getMatchScore = function () {
+  const loveScore = loverFunction();
   if (loveScore > 90) {
-    return greatMatch;
+    return loveScore, greatMatch;
   }
   if (loveScore > 70 && loveScore < 90) {
-    return goodMatch;
+    return loveScore, goodMatch;
   }
   if (loveScore > 50 && loveScore < 70) {
-    return averageMatch;
+    return loveScore, averageMatch;
   }
   if (loveScore < 50) {
-    return badMatch;
+    return loveScore, badMatch;
   }
 };
 
-button.addEventListener("click", function (e) {
+button.addEventListener("submit", function (e) {
   e.preventDefault();
 
   const firstName = document.getElementById("first-name").value;
   const secondName = document.getElementById("second-name").value;
 
-  if (firstName === "" || secondName === "") {
-    alert("You must enter both names!");
-    return;
-  }
-
   result.classList.remove("result-hidden");
-  result.innerHTML = `💖Love Compatibility between ${firstName} and ${secondName} is ${loverMatchRate} % <br>  ${getMatchScore(
-    loverMatchRate
-  )}`;
+  result.innerHTML = `💖Love Compatibility between ${firstName} and ${secondName} is ${loveScore} % <br>  ${getMatchScore()}`;
 });
 
-resetButton.addEventListener("click", function () {
+resetButton.addEventListener("click", function (e) {
+  e.preventDefault();
   result.classList.add("result-hidden");
   inputFields.forEach((input) => (input.value = ""));
 });
