@@ -22,29 +22,32 @@ const loverFunction = function () {
 // let loverMatchRate = loverFunction();
 
 const getMatchScore = function () {
-  const loveScore = loverFunction();
+  let loveScore = loverFunction();
+
   if (loveScore > 90) {
-    return loveScore, greatMatch;
+    return (matchArray = [loveScore, greatMatch]);
   }
   if (loveScore > 70 && loveScore < 90) {
-    return loveScore, goodMatch;
+    return (matchArray = [loveScore, goodMatch]);
   }
   if (loveScore > 50 && loveScore < 70) {
-    return loveScore, averageMatch;
+    return (matchArray = [loveScore, averageMatch]);
   }
   if (loveScore < 50) {
-    return loveScore, badMatch;
+    return (matchArray = [loveScore, badMatch]);
   }
 };
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
+  getMatchScore();
+  const [loveScore, message] = getMatchScore();
 
   const firstName = document.getElementById("first-name").value;
   const secondName = document.getElementById("second-name").value;
 
   result.classList.remove("result-hidden");
-  result.innerHTML = `💖Love Compatibility between ${firstName} and ${secondName} is ${loveScore} % <br>  ${getMatchScore()}`;
+  result.innerHTML = `💖Love Compatibility between ${firstName} and ${secondName} is ${loveScore} % <br>  ${message}`;
 });
 
 resetButton.addEventListener("click", function (e) {
