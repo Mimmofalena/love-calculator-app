@@ -73,6 +73,7 @@ h2 {
   box-shadow: 1px 2px black;
   animation: show 1s;
   width: 95%;
+  height: 100%;
 }
 .result-hidden {
   display: none;
@@ -124,4 +125,9 @@ h2 {
   100% {
     opacity: 1;
   }
+}
+
+.submit-form {
+  /* width: 95%;
+  height: 15rem; */
 }

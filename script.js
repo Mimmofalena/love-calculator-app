@@ -4,6 +4,7 @@ const lovePercentage = document.querySelector(".love-percentage");
 const result = document.querySelector(".result");
 const inputFields = document.querySelectorAll("input");
 const resetButton = document.querySelector(".reset");
+const form = document.querySelector(".submit-form");
 
 document.getElementById("first-name").focus();
 
@@ -20,8 +21,8 @@ const loverFunction = function () {
 
 // let loverMatchRate = loverFunction();
 
+const loveScore = loverFunction();
 const getMatchScore = function () {
-  const loveScore = loverFunction();
   if (loveScore > 90) {
     return loveScore, greatMatch;
   }
@@ -36,7 +37,7 @@ const getMatchScore = function () {
   }
 };
 
-button.addEventListener("submit", function (e) {
+form.addEventListener("submit", function (e) {
   e.preventDefault();
 
   const firstName = document.getElementById("first-name").value;
@@ -47,7 +48,6 @@ button.addEventListener("submit", function (e) {
 });
 
 resetButton.addEventListener("click", function (e) {
-  e.preventDefault();
   result.classList.add("result-hidden");
   inputFields.forEach((input) => (input.value = ""));
 });
