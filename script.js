@@ -19,8 +19,6 @@ const loverFunction = function () {
   return Math.floor(randomNumber) + 1;
 };
 
-// let loverMatchRate = loverFunction();
-
 const getMatchScore = function () {
   let loveScore = loverFunction();
 
@@ -36,6 +34,7 @@ const getMatchScore = function () {
   if (loveScore < 50) {
     return (matchArray = [loveScore, badMatch]);
   }
+  return "";
 };
 
 form.addEventListener("submit", function (e) {
