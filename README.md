@@ -1,2 +1,3 @@
 # love-calculator-app
- Simple project to improve math skills, DOM manipulatin and CSS
+Made with Javascript, HTML and plain CSS.
+ Simple project to improve DOM manipulation, Javascript and CSS
